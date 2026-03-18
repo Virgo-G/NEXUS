@@ -39,7 +39,7 @@ TABLE OF CONTENTS
   1. INSTALLATION & SETUP
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-  local NexusUI = loadstring(game:HttpGet("YOUR_LOADER_URL_HERE"))()
+  local NexusUI = loadstring(game:HttpGet("https://raw.githubusercontent.com/Virgo-G/NEXUS/refs/heads/main/NexusUI_Library.lua"))()
 
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
@@ -302,7 +302,7 @@ TABLE OF CONTENTS
   QUICK REFERENCE
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-  local NexusUI = loadstring(game:HttpGet("YOUR_LOADER_URL_HERE"))()
+  local NexusUI = loadstring(game:HttpGet("https://raw.githubusercontent.com/Virgo-G/NEXUS/refs/heads/main/NexusUI_Library.lua"))()
   local ui = NexusUI.new({ Theme = "Dark" })
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
