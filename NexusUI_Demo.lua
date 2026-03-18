@@ -6,7 +6,7 @@
 --]]
 
 -- 🔹 LOAD LIBRARY (PUT YOUR REAL LOADER URL)
-local NexusUI = loadstring(game:HttpGet("YOUR_LOADER_URL_HERE"))()
+local NexusUI = loadstring(game:HttpGet("https://raw.githubusercontent.com/Virgo-G/NEXUS/refs/heads/main/NexusUI_Library.lua"))()
 
 -- ─────────────────────────────────────────────
 --  INITIALIZE
