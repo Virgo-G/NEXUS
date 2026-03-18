@@ -3696,33 +3696,43 @@ end
 -- ============================================================
 --  EXPORTS
 -- ============================================================
-return {
-	new          = NexusUI.new,
+--// MAIN OBJECT
+local NexusUI = {}
 
-	-- Exposed classes for advanced usage
-	ThemeManager = ThemeManager,
-	EventEmitter = EventEmitter,
-	DragManager  = DragManager,
-	Utils        = Utils,
+--// CREATE WINDOW (MAIN ENTRY)
+function NexusUI:CreateWindow(config)
+    config = config or {}
 
-	-- Component constructors (standalone usage)
-	Button       = Button.new,
-	Toggle       = Toggle.new,
-	Slider       = Slider.new,
-	Dropdown     = Dropdown.new,
-	TextBox      = TextBoxComp.new,
-	Checkbox     = Checkbox.new,
-	ProgressBar  = ProgressBar.new,
-	NumberStepper= NumberStepper.new,
-	RadioGroup   = RadioGroup.new,
-	Accordion    = Accordion.new,
-	TabSystem    = TabSystem.new,
-	ColorPicker  = ColorPicker.new,
-	ScrollFrame  = ScrollFrameComp.new,
-	UIWindow     = UIWindow.new,
-	Spinner      = LoadingSpinner.new,
-	Notification = NotificationSystem.new,
-	Modal        = ModalSystem.new,
-	Tooltip      = TooltipSystem.new,
-	ContextMenu  = ContextMenu.new,
-}
+    local Window = UIWindow.new(config)
+
+    -- Auto parent fix (executor safe)
+    if Window and Window.ScreenGui then
+        Window.ScreenGui.Parent = game.CoreGui
+    end
+
+    return Window
+end
+
+--// COMPONENT EXPORTS (OPTIONAL ACCESS)
+NexusUI.Button        = Button.new
+NexusUI.Toggle        = Toggle.new
+NexusUI.Slider        = Slider.new
+NexusUI.Dropdown      = Dropdown.new
+NexusUI.TextBox       = TextBoxComp.new
+NexusUI.Checkbox      = Checkbox.new
+NexusUI.ProgressBar   = ProgressBar.new
+NexusUI.NumberStepper = NumberStepper.new
+NexusUI.RadioGroup    = RadioGroup.new
+NexusUI.Accordion     = Accordion.new
+NexusUI.TabSystem     = TabSystem.new
+NexusUI.ColorPicker   = ColorPicker.new
+NexusUI.ScrollFrame   = ScrollFrameComp.new
+NexusUI.UIWindow      = UIWindow.new
+NexusUI.Spinner       = LoadingSpinner.new
+NexusUI.Notification  = NotificationSystem.new
+NexusUI.Modal         = ModalSystem.new
+NexusUI.Tooltip       = TooltipSystem.new
+NexusUI.ContextMenu   = ContextMenu.new
+
+--// REQUIRED RETURN
+return NexusUI
